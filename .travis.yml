@@ -83,7 +83,7 @@ jobs:
       script:
         - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin quay.io
         - docker push quay.io/water-hole/ansible-operator
-        - cd $GOPATH/src/github.com/water-hole/ansible-operator/examples
+        - cd $GOPATH/src/github.com/water-hole/ansible-operator/example
         - docker build -t quay.io/water-hole/busybox-ansible-operator .
         - docker push quay.io/water-hole/busybox-ansible-operator
 stages:
